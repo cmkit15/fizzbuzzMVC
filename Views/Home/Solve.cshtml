@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row text-center">
+    <div class="col">
+        <h1>FizzBuzz MVC</h1>
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col site-info">
+        <p>
+            FizzBuzz is a program that prints the numbers from 1 to 100.<br>
+            Fizz will represent the multiples of the first number.<br>
+            Buzz will represent the multiples of the second number.<br>
+            Fizzbuzz will represent the multiples of both numbers.
+        </p>
+    </div>
+</div>
+
+<div class="row text-center">    
+    <div class="col input-section">
+        <form asp-action="Solve">
+            <p>Enter two numbers between 1 & 100</p>
+            <input class="form-control" type="text" name="num1" autocomplete="off" placeholder="Enter number 1" id="num1">
+            <input class="form-control" type="text" name="num2" autocomplete="off" placeholder="Enter number 2" id="num2">
+
+            <!--<button class="btn btn-danger" onclick="reset()">Clear</button>-->
+            <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+        </form>
+    </div>    
+</div>
+
+<div class="row text-center">
+    <div class="col results-section">
+        <span id="errorMessage"></span>
+        <p id="numbers">@ViewData["numbers"]</p>
+        <div id="results">@ViewData["Output"]</div>
+    </div>
+</div>
